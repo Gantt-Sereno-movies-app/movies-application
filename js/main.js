@@ -2,6 +2,8 @@
 
 let movies = [];
 
+main();
+
 document.addEventListener('DOMContentLoaded', main');
 
 	aysnc function main() {
