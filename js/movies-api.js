@@ -26,7 +26,7 @@ function getMovies() {
 getMovies()
 
 // export
-function displayMovies(movies) {
+function displayMovies (movies) {
 	movies.forEach(movie =>{
 		const div = document.createElement('div');
 		const image = document.createElement('img');
@@ -44,11 +44,12 @@ function displayMovies(movies) {
 		edit.textContent = 'Edit'
 		remove.innerText = 'Delete'
 
-div.appendChild()
-div.appendChild()
-div.appendChild()
-div.appendChild()
-
+		div.appendChild(div)
+		div.appendChild(img)
+		div.appendChild(h3)
+		div.appendChild(p)
+		div.appendChild(button)
+		div.appendChild(button)
 
 	})
 
