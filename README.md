@@ -1,6 +1,8 @@
 # movies-application
 The Movies Application is a single-page application (SPA) that empowers users to manage a collection of movies. With this application, users can perform various actions, such as adding, editing, and deleting movies, as well as rating them. Here's a quick guide to get started:
 
+Figma Design Link https://www.figma.com/file/lTqTI3FVcI3Qz8ydeC7ina/Movie-Streaming-Web-App-UI-(Community)?type=design&node-id=204%3A332&mode=design&t=QaNLnuShByzFsCJO-1
+
 Setting Up JSON Data
 In the project's data directory, create a new file named movies.json.
 Populate movies.json with the following example content:
