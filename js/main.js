@@ -7,9 +7,9 @@ main();
 document.addEventListener('DOMContentLoaded', main');
 
 	aysnc function main() {
-	showLoadingMessage(true);
+	// showLoadingMessage(true);
 	movies = await getMovies();
-	showLoadingMessage(false);
+	// showLoadingMessage(false);
 
 	displayMovies();
 
