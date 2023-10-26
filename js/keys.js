@@ -1,4 +1,3 @@
 "use strict";
 
-//This is the OMDb API Key
-const OMDb_API_Key:
+const apiURL: https://employeedetails.free.beeceptor.com/my/api/path;
