@@ -1,12 +1,108 @@
 <!DOCTYPE html>
 <html lang = "en">
 <head>
-  <meta charset = "UTF-8">
-  <title>Title</title>
+<meta charset = "UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!---Start Links-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link rel = "stylesheet" href = "css/movie.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+	<!---End Links -->
+  <title>Settings</title>
 </head>
 <body>
-    <div class = "page wrapper">
+<div class = "page wrapper">
 
-    </div>
+
+<!--- Start Section Adding the Loader-->
+	<div class="spinner d-flex justify-content-center position-absolute top-50 start-50 ">
+		<div class="spinner-border text-primary"
+		     id="spinner" role="status">
+		    <span class="sr-only">Loading...</span>
+		</div>
+		<!-- table for showing data -->
+        <table id="data"></table>
+	</div>
+<!--- End Section Adding the Loader-->
+
+
+<!---Start Section Adding the Navigation bars-->
+	<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-auto bg-light sticky-top">
+            <div class="d-flex flex-sm-column flex-row flex-nowrap bg-light align-items-center sticky-top">
+                <a href="/" class="d-block p-3 link-dark text-decoration-none" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
+                    <i class="bi-bootstrap fs-1"></i>
+                </a>
+                <ul class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center align-items-start">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link py-3" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
+                          <i class="fas fa-film me-2"></i>Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="favorite.html" class="nav-link py-3" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Favorites">
+                            <i class="fas fa-thumbs-up me-2"></i>Favorites
+                        </a>
+                    </li>
+                    <li>
+                        <a href="trending.html" class="nav-link py-3 d-none d-lg-block" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Trending">
+                            <i class="fas fa-fire me-2 "></i>Trending
+                        </a>
+                    </li>
+                    <li>
+                        <a href="coming-soon.html" class="nav-link py-3 d-none d-lg-block" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Coming-Soon">
+                             <i class="fas fa-calendar me-2"></i>Coming Soon
+                        </a>
+                    </li>
+                    <li>
+                        <a href="community.html" class="nav-link py-3 d-none d-lg-block" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Community">
+                            <i class="fas fa-users me-2"></i>Community
+                        </a>
+                    </li>
+	                <li>
+                        <a href="social.html" class="nav-link py-3 d-none d-lg-block" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Social">
+                           <i class="fas fa-comment me-2"></i>Social
+                        </a>
+                    </li>
+	                <li>
+                        <a href="profile.html" class="nav-link py-3" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Profile">
+                           <i class="fas fa-user me-2"></i>Profile
+                        </a>
+                    </li>
+	                <li>
+                        <a href="#" class="nav-link py-3" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Setting">
+                           <i class="fas fa-sign-out-alt me-2"></i>Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+	    <!-- Start Content Section-->
+     <div class="col-sm p-3 min-vh-100 text-center fw-bold fs-1">
+
+
+          <!-- Start Profile Settings -->
+
+          <!-- End Profile Settings-->
+	</div>
+
+
+		<!-- End Content Section-->
+ </div> <!--This div closes the page wrapper -->
+
+<!--js to test out-->
+<script src="js/movies-api.js"></script>
+
+<!---Start Scripts-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<!---End Scripts-->
+
+
+
+
 </body>
 </html>
+
+
