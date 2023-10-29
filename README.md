@@ -37,4 +37,9 @@ Copy code
 The -d 1200 flag adds a 1.2-second delay to the response time (useful for simulating network latency).
 The --watch flag specifies the location of the JSON file used for data storage.
 Running json-server
-To start the json-server and make your movie data accessible through HTTP requests, execute the custom script
+To start the json-server and make your movie data accessible through HTTP requests, execute the custom script you created:
+
+bash
+Copy code
+npm run db
+This script will run json-server, enabling you to make fetch requests to access your movie data at "http://localhost:3000/movies".
