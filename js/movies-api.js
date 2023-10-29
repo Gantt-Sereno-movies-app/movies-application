@@ -26,8 +26,6 @@ function getMovies() {
 
 getMovies()//delete this later
 
-
-
 function addMovie() {
 	try {
 		const options = {
@@ -42,8 +40,6 @@ function addMovie() {
 		console.error(error);
 	}
 }
-
-
 
 function createMovie(movie) {
 	try {
@@ -79,14 +75,26 @@ async function updateMovie(movie) {
 	}
 }
 
-export async function deleteMovie(id) {
+async function deleteMovie(id) {
 	try {
 		const options = {
 			method: "DELETE"
 		}
-		return fetch(`${MOVIES_HOST}/books/${id}`, options)
+		return fetch(`${MOVIES_HOST}/movies/${id}`, options)
 			.then(response => response.json())
-			.then(movie => book);
+			.then(movie => movie);
+	} catch(error) {
+		console.error(error);
+	}
+}
+
+function getMovie(id) {
+	try {
+		return fetch(`${MOVIES_HOST}/movies/${id}`)
+			.then(response => response.json())
+			.then(async movie => {
+				return book;
+			});
 	} catch(error) {
 		console.error(error);
 	}
@@ -98,6 +106,8 @@ const movieCards = document.querySelector("#movie-cards-row")
 
 addMovieBtn.addEventListener("click", (e)=>{
 	e.preventDefault()
+
+	let movies = [];
 
 	//create a movie object from the form fields
 	let newMovie ={
@@ -144,6 +154,26 @@ function generateCard (movies) {
 	})
 }
 function removeMovieCard(event){
+	if (confirm("Are you sure?"))
 	event.target.parentElement.remove()
-
 }
+
+// async function deleteMovie(id) {
+// 	try {
+// 		const options = {
+// 			method: "DELETE"
+// 		}
+// 		return fetch(`${MOVIES_HOST}/movies/${id}`, options)
+// 			.then(response => response.json())
+// 			.then(movie => movie);
+// 	} catch(error) {
+// 		console.error(error);
+// 	}
+// }
+// function removeMovieCard(event){
+// 	if (confirm("Are you sure?")) {
+// 		let movieId = event.target.parentElement.dataset.movie.id;
+// 		deleteMovie(movieId);
+// 		event.target.parentElement.remove();
+// 	}
+// }
