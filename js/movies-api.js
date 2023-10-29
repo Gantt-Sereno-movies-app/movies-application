@@ -79,7 +79,7 @@ async function updateMovie(movie) {
 	}
 }
 
-export async function deleteMovie(id) {
+async function deleteMovie(id) {
 	try {
 		const options = {
 			method: "DELETE"
@@ -96,22 +96,22 @@ export async function deleteMovie(id) {
 const addMovieBtn = document.querySelector("#add-new-movie-btn")
 const movieCards = document.querySelector("#movie-cards-row")
 
-addMovieBtn.addEventListener("click", (e)=>{
-	e.preventDefault()
-
-	//create a movie object from the form fields
-	let newMovie ={
-		title: document.querySelector("#title").value,
-		rating: document.querySelector("#rating").value,
-		genre: document.querySelector("#genre").value,
-		movieSummary: document.querySelector("#movieSummary").value
-	}
-
-	createMovie(newMovie)//adds movie to JSON
-	movies.push(newMovie)//pushes movie to array
+// addMovieBtn.addEventListener("click", (e)=>{
+// 	e.preventDefault()
+//
+// 	//create a movie object from the form fields
+// 	let newMovie ={
+// 		title: document.querySelector("#title").value,
+// 		rating: document.querySelector("#rating").value,
+// 		genre: document.querySelector("#genre").value,
+// 		movieSummary: document.querySelector("#movieSummary").value
+// 	}
+//
+// 	createMovie(newMovie)//adds movie to JSON
+// 	movies.push(newMovie)//pushes movie to array
 	///add something that says thanks for your submission after clicking add my movie
 
-})
+// })
 function generateCard (movies) {
 
 	movies.forEach( movie =>{
