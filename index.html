@@ -1,32 +1,39 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
 <head>
-<meta charset = "UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!---Start Links-->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-<link rel = "stylesheet" href = "css/movie.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
-<!---End Links -->
-  <title>AA Movies</title>
+	<!---Start Links-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+	      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/movie.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+	<!---End Links -->
+	<title>AA Movies</title>
 </head>
 <body>
-<div class = "page wrapper">
+<div class="page wrapper">
 
 
-<!--- Start Section Adding the Loader-->
+	<!--- Start Section Adding the Loader-->
 	<div class="spinner d-flex justify-content-center position-absolute top-50 start-50 ">
 		<div class="spinner-border text-primary"
 		     id="spinner" role="status">
-		    <span class="sr-only">Loading...</span>
+			<span class="sr-only">Loading...</span>
 		</div>
 		<!-- table for showing data -->
-        <table id="data"></table>
+		<table id="data"></table>
 	</div>
-<!--- End Section Adding the Loader-->
+	<!--- End Section Adding the Loader-->
 
+	<div class="container-fluid" id="main-container">
+		<div class="row">
 
+			<!-- Start Content Section-->
+			<div class="col-sm p-3 min-vh-100 text-center">
+				<h1>A^2 Movies</h1>
+        
 <!---Start Section Adding the Navigation bars-->
 	<div class="container-fluid">
     <div class="row">
@@ -79,52 +86,75 @@
                 </ul>
             </div>
         </div>
-<!-- Start Content Section-->
-     <div class="col-sm p-3 min-vh-100 text-center fw-bold fs-1">
-          A<sup>2</sup>  Movies
 
-<!-- Start TrendingCarousel -->
-	  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-		  <div class="carousel-inner">
-		    <div class="carousel-item active">
-		      <img src="img/pexels-ron-lach-9807285.jpg" class="d-block w-100" alt="...">   <!-- Fetch Image for trending-->
-		    </div>
-		    <div class="carousel-item">
-		      <img src="img/pexels-henry-&-co-3137890.jpg" class="d-block w-100" alt="...">
-			    <!-- Fetch Image for trending-->
-		    </div>
-		    <div class="carousel-item">
-		      <img src="img/pexels-ron-lach-9807290.jpg" class="d-block w-100" alt="...">   <!-- SFetch Image for trending -->
-		    </div>
-		  </div>
-		  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-		    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-		    <span class="visually-hidden">Previous</span>
-		  </button>
-		  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-		    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-		    <span class="visually-hidden">Next</span>
-		  </button>
+
+				<!-- Start TrendingCarousel -->
+				<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img src="img/pexels-ron-lach-9807285.jpg" class="d-block w-100" alt="...">
+							<!-- Fetch Image for trending-->
+						</div>
+						<div class="carousel-item">
+							<img src="img/pexels-henry-&-co-3137890.jpg" class="d-block w-100" alt="...">
+							<!-- Fetch Image for trending-->
+						</div>
+						<div class="carousel-item">
+							<img src="img/pexels-ron-lach-9807290.jpg" class="d-block w-100" alt="...">
+							<!-- Fetch Image for trending -->
+						</div>
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+					        data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+					        data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+				<!-- End Trending Carousel -->
+				<!-- Start Movie Cards Content -->
+				<div class="container" id="movie-cards-container">
+					<div class="row" id="movie-cards-row"></div>
+				</div>
+				<!-- End Movie Card Content -->
+
+				<!--Start Add Movie Form-->
+				<form class="form" id="add-movie">
+					<div>
+						<label>Title:</label>
+						<input id="title" name="title" type="text">
+						<label>Genre:</label>
+						<input id="genre" name="genre" type="text">
+						<label>Summary:</label>
+						<input id="movieSummary" name="movieSummary" type="text">
+						<label>Rating:</label>
+						<input id="rating" name="rating" type="text">
+					</div>
+					<button class="button" type="submit" id="add-new-movie-btn">Add My Movie!</button>
+				</form>
+				<!--End Add Movie Form-->
+
+			</div>
 		</div>
-<!-- End Trending Carousel -->
-	</div>
-<!-- Start Movie Cards Content -->
-<!-- End Movie Card Content -->
-    </div>
+		<!-- End Content Section-->
 
-<!-- End Content Section-->
- </div> <!--This div closes the page wrapper -->
+	</div> <!--This div closes the page wrapper -->
 
-<!--js to test out-->
-<script src="js/movies-api.js"></script>
+	<!--js to test out-->
+	<script src="js/movies-api.js"></script>
 
-<!---Start Scripts-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-<!---End Scripts-->
+	<!---Start Scripts-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+	        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+	        crossorigin="anonymous"></script>
+	<!---End Scripts-->
 
 
-
-
+</div>
 </body>
 </html>
 
