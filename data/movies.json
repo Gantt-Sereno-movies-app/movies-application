@@ -33,7 +33,8 @@
       "title": "Fletch",
       "rating": 4,
       "genre": "Comedy",
-      "movieSummary": "Irwin M. \"Fletch\" Fletcher is a newspaper reporter being offered a large sum to off a cancerous millionaire, but is on the run, risking his job and finding clues when it's clear the man is healthy."
+      "movieSummary": "Irwin M. \"Fletch\" Fletcher is a newspaper reporter being offered a large sum to off a cancerous millionaire, but is on the run, risking his job and finding clues when it's clear the man is healthy.",
+      "posterURL": "https://cdn11.bigcommerce.com/s-yzgoj/images/stencil/1280x1280/products/38777/4674386/apifo3lin__72224.1625620313.jpg?c=2"
     },
     {
       "id": 5,
@@ -75,6 +76,13 @@
       "genre": "fantasy",
       "movieSummary": "eh, ok. soundtrack is good.",
       "posterURL": "https://m.media-amazon.com/images/M/MV5BZGMxZTdjZmYtMmE2Ni00ZTdkLWI5NTgtNjlmMjBiNzU2MmI5XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+    },
+    {
+      "title": "dfsdf",
+      "rating": "asdfsef",
+      "genre": "asdfsef",
+      "movieSummary": "asdfsaedf",
+      "id": 10
     }
   ]
 }
