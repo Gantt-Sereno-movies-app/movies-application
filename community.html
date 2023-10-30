@@ -1,12 +1,73 @@
 <!DOCTYPE html>
-<html lang = "en">
-<head>
-  <meta charset = "UTF-8">
-  <title>Title</title>
-</head>
-<body>
-    <div class = "page wrapper">
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+	<!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Movie App</title>
+</head>
+
+<body>
+    <!-- Bootstrap Dashboard -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+                <div class="position-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Movies
+                            </a>
+                        </li>
+	                    <!-- Add more menu items as needed -->
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <!-- Your enhanced movie app content goes here -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h1 class="text-center">Movie Database</h1>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="search-box">
+                                <input type="text" id="search" placeholder="Search for movies">
+                                <button id="search-button">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" id="movie-cards-row">
+                        <!-- Movie cards will be dynamically generated here -->
+                    </div>
+                    <div class="text-center">
+                        <button id="add-new-movie-btn" class="btn btn-primary">Add Movie</button>
+                    </div>
+                </div>
+                <!-- Modal for adding/editing movies -->
+                <div class="modal" id="movieModal">
+                    <!-- ... Modal content as shown in the previous response ... -->
+                </div>
+            </main>
+        </div>
     </div>
+
+    <!-- Include Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
