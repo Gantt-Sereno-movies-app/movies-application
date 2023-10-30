@@ -15,6 +15,7 @@ const MOVIES_HOST = "http://localhost:3000";
 
 
 // export
+showLoadingMessage()
 function getMovies() {
 	fetch(`${MOVIES_HOST}/movies`)
 		.then(response => response.json())
@@ -22,6 +23,7 @@ function getMovies() {
 			console.log(movies);
 		generateCard(movies) //maybe move this to main too
 		})
+
 }
 
 getMovies()//delete this later
@@ -97,6 +99,26 @@ function getMovie(id) {
 			});
 	} catch(error) {
 		console.error(error);
+	}
+}
+function showLoadingMessage() {
+	const movieContainer = document.getElementById("movie-cards-row");
+	const spinner = document.createElement("div");
+	spinner.innerHTML = `
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    `;
+
+	movieContainer.innerHTML = ""; // Clear existing content
+	movieContainer.appendChild(spinner);
+}
+
+
+function hideLoadingMessage() {
+	const spinner = document.querySelector(".spinner-border");
+	if (spinner) {
+		spinner.style.display = "none";
 	}
 }
 
