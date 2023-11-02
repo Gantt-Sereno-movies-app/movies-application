@@ -223,6 +223,8 @@ function generateCard (movies) {
 		const div = document.createElement('div');
 		const image = document.createElement('img');
 		const name = document.createElement('h3');
+		const genre = document.createElement('p')
+		const rating = document.createElement('p')
 		const summary = document.createElement('p')
 		const edit = document.createElement('button');
 		 edit.addEventListener("click", updateMovie,);
@@ -235,12 +237,16 @@ function generateCard (movies) {
 
 		image.src = movie.posterURL
 		name.innerText = movie.title
+		genre.innerText = movie.genre
+		rating.innerText = movie.rating
 		summary.innerText = movie.movieSummary
 		edit.textContent = 'Edit'
 		remove.innerText = 'Remove'
 
 		div.appendChild(image)
 		div.appendChild(name)
+		div.appendChild(genre)
+		div.appendChild(rating)
 		div.appendChild(summary)
 		div.appendChild(edit)
 		div.appendChild(remove)
